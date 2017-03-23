@@ -1,16 +1,18 @@
 var a = prompt('Podaj wartość zmiennej a:'),
-    b = prompt('Podaj wartość zmiennej b:'),
-    value;
-
+  b = prompt('Podaj wartość zmiennej b:'),
+  value,
+  info,
+  sign;
 value = (a * a) + (2 * a * b) - (b * b);
 
 if (value > 0) {
-    alert('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik dodatni.');
-    console.log('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik dodatni.');
+  sign = "dodatni";
 } else if (value < 0) {
-    alert('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik ujemny.');
-    console.log('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik ujemny.');
+  sign = "ujemny";
 } else {
-    alert('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik jest równy zero.');
-    console.log('Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik jest równy zero.');
+  sign = "jest równy zero";
 }
+
+info = 'Wynik działania: (a * a) + (2 * a * b) - (b * b) wynosi ' + value + ' - Wynik ' + sign;
+console.log(info);
+alert(info);
